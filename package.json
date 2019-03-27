@@ -1,0 +1,42 @@
+{
+  "name": "package-name",
+  "version": "1.0.0",
+  "description": "Package Name",
+  "private": true,
+  "scripts": {
+    "watch": "webpack --watch",
+    "build": "webpack",
+    "deploy": "webpack --config webpack.prod.js"
+  },
+  "author": "Luca Bacchi <bacchilu@gmail.com> (http://www.lucabacchi.it)",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "browsers": [
+              "> 5%",
+              "last 2 versions"
+            ]
+          }
+        }
+      ],
+      "@babel/preset-react"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  },
+  "dependencies": {
+    "moment-mini": "^2.22.1",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
+  }
+}
